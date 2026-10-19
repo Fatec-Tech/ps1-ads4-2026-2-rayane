@@ -1,8 +1,3 @@
-Aqui está o README em Markdown, pronto para copiar e colar no arquivo `README.md` do GitHub.
-
-markdown
-````
-
 # Aula 1 — Cadastro de Pacientes no Navegador
 
 **Disciplina:** Programação de Scripts I — Backend
@@ -13,60 +8,58 @@ markdown
 
 ## 1. Sobre a aula
 
-Nesta aula, você vai desenvolver uma aplicação simples de cadastro de pacientes utilizando HTML, CSS e JavaScript puro, sem frameworks e sem backend.
+Nesta aula, desenvolvi uma aplicação simples de cadastro de pacientes utilizando HTML, CSS e JavaScript puro, sem frameworks e sem backend.
 
-A aplicação permitirá cadastrar pacientes informando nome, e-mail e data de nascimento. Após o cadastro, os dados serão exibidos em uma tabela na própria página.
+A aplicação permite cadastrar pacientes informando nome, e-mail e data de nascimento. Após realizar o cadastro, os dados são exibidos em uma tabela na própria página.
 
-Este projeto será o ponto de partida para uma aplicação que evoluirá ao longo da disciplina. Nas próximas aulas, você aprenderá a utilizar um backend com Node.js e Express e, posteriormente, um banco de dados PostgreSQL.
+Este projeto é o ponto de partida para uma aplicação que será desenvolvida ao longo da disciplina. Nas próximas aulas, vou aprender a integrar o sistema a um backend com Node.js e Express e, posteriormente, a um banco de dados PostgreSQL.
 
-> **Importante:** nesta primeira versão, os dados ficam armazenados apenas na memória do navegador. Ao atualizar ou fechar a página, os pacientes cadastrados serão perdidos.
+**Importante:** nesta primeira versão, os dados ficam armazenados apenas na memória do navegador. Por isso, ao atualizar a página, os pacientes cadastrados são perdidos.
 
-## 2. Objetivos de aprendizagem
+## 2. O que aprendi
 
-Ao concluir esta aula, você deverá ser capaz de:
+Ao desenvolver esta aplicação, pude praticar e compreender melhor os seguintes conceitos:
 
-- Capturar os dados preenchidos em um formulário HTML utilizando JavaScript.
-- Trabalhar com eventos de formulário, especialmente o evento `submit`.
-- Utilizar `event.preventDefault()` para impedir o recarregamento automático da página.
-- Criar e manipular arrays de objetos para armazenar informações.
-- Utilizar métodos de array, como `push()` e `forEach()`.
-- Manipular o DOM para criar e inserir elementos HTML dinamicamente.
-- Utilizar template strings para montar conteúdos com variáveis.
-- Organizar o código em funções com responsabilidades específicas.
-- Compreender a separação de responsabilidades entre HTML, CSS e JavaScript.
+- Captura de dados de um formulário HTML utilizando JavaScript.
+- Utilização do evento `submit` para detectar o envio do formulário.
+- Uso de `event.preventDefault()` para impedir o recarregamento automático da página.
+- Criação e manipulação de arrays de objetos.
+- Utilização dos métodos `push()` e `forEach()`.
+- Manipulação do DOM para criar e inserir elementos HTML dinamicamente.
+- Utilização de template strings para inserir variáveis em strings.
+- Organização do código em funções.
+- Separação das responsabilidades entre HTML, CSS e JavaScript.
 
-## 3. O problema que você vai resolver
+## 3. O problema que resolvi
 
-Imagine que uma clínica precisa cadastrar pacientes e consultar uma lista com os dados de cada pessoa.
+O objetivo da atividade foi desenvolver uma solução simples para uma clínica que precisa cadastrar pacientes e visualizar os dados registrados.
 
-Para resolver esse problema, você desenvolverá uma aplicação com três partes principais:
+Para isso, implementei três partes principais:
 
 - **Formulário:** permite informar o nome, o e-mail e a data de nascimento do paciente.
-- **Armazenamento:** guarda os pacientes em um array de objetos no JavaScript.
-- **Tabela:** apresenta os pacientes cadastrados na página, atualizando automaticamente após cada novo cadastro.
+- **Armazenamento:** utiliza um array de objetos em JavaScript para guardar os dados durante a execução da aplicação.
+- **Tabela:** apresenta os pacientes cadastrados e é atualizada automaticamente após cada novo cadastro.
 
-O objetivo é construir essa solução passo a passo e compreender como as diferentes partes trabalham juntas.
+Com essa atividade, pude entender melhor como os dados são capturados, armazenados e apresentados em uma aplicação web.
 
-## 4. Conceitos que você vai utilizar
+## 4. Conceitos utilizados
 
-| Conceito | Como será utilizado |
+| Conceito | Como utilizei |
 |---|---|
-| Formulário HTML (`<form>`) | Capturar os dados preenchidos pelo usuário. |
-| Evento `submit` | Executar o código quando o formulário for enviado. |
-| `event.preventDefault()` | Evitar o recarregamento da página durante o cadastro. |
-| Array de objetos | Representar a lista de pacientes e seus dados. |
-| Método `push()` | Adicionar um novo paciente ao array. |
-| Método `forEach()` | Percorrer os pacientes para gerar as linhas da tabela. |
-| Manipulação do DOM | Criar e inserir elementos HTML utilizando JavaScript. |
-| Template strings | Inserir valores de variáveis em uma string utilizando `${}`. |
-| Funções | Separar o cadastro, a renderização e a formatação dos dados. |
-| `document.getElementById()` | Localizar elementos HTML pelo identificador (`id`). |
-
-Você já deve conhecer parte desses conceitos. O foco da aula será entender como utilizá-los em conjunto para desenvolver uma aplicação funcional.
+| Formulário HTML (`<form>`) | Para receber os dados preenchidos pelo usuário. |
+| Evento `submit` | Para executar a lógica de cadastro quando o formulário é enviado. |
+| `event.preventDefault()` | Para impedir que a página seja recarregada durante o cadastro. |
+| Array de objetos | Para armazenar a lista de pacientes e suas informações. |
+| Método `push()` | Para adicionar novos pacientes ao array. |
+| Método `forEach()` | Para percorrer os pacientes e gerar as linhas da tabela. |
+| Manipulação do DOM | Para criar e inserir elementos HTML utilizando JavaScript. |
+| Template strings | Para montar o conteúdo das linhas da tabela utilizando variáveis. |
+| Funções | Para separar a lógica de cadastro, renderização e formatação das datas. |
+| `document.getElementById()` | Para localizar os elementos HTML pelos seus identificadores. |
 
 ## 5. Estrutura do projeto
 
-Crie uma pasta chamada `aula-01-cadastro-pacientes` e organize os arquivos da seguinte maneira:
+Organizei os arquivos do projeto da seguinte maneira:
 
 ```text
 aula-01-cadastro-pacientes/
@@ -77,47 +70,45 @@ aula-01-cadastro-pacientes/
     └── app.js
 ```
 
-Cada arquivo terá uma responsabilidade:
+Cada arquivo possui uma responsabilidade específica:
 
 - `index.html`: contém a estrutura da página, o formulário e a tabela.
 - `css/style.css`: contém os estilos personalizados da aplicação.
 - `js/app.js`: contém a lógica de cadastro e atualização da tabela.
 
-O Bootstrap será utilizado para facilitar a estilização básica da interface.
+Também utilizei o Bootstrap por meio de uma CDN para facilitar a estilização da interface.
 
-## 6. Desenvolvimento da aplicação
+## 6. Como desenvolvi a aplicação
 
-### Etapa 1 — Criar a estrutura HTML
+### Etapa 1 — Estrutura HTML
 
-No arquivo `index.html`, crie uma página com:
+Primeiro, criei o arquivo `index.html`, responsável pela estrutura da página.
 
-- Um título chamado **Cadastro de Pacientes**.
-- Um formulário com os campos nome, e-mail e data de nascimento.
-- Um botão para cadastrar o paciente.
-- Uma tabela com as colunas nome, e-mail e data de nascimento.
-- Um elemento `<tbody>` com o identificador `tabela-pacientes`, onde as linhas serão inseridas pelo JavaScript.
+Nele, desenvolvi um formulário com os campos nome, e-mail e data de nascimento, além de um botão para cadastrar os pacientes.
 
-Utilize o atributo `required` nos campos para exigir o preenchimento antes do envio.
+Também criei uma tabela com as colunas correspondentes aos dados dos pacientes. O elemento `<tbody>`, identificado como `tabela-pacientes`, é utilizado para inserir as linhas dinamicamente por meio do JavaScript.
 
-Inclua também o Bootstrap por meio de uma CDN e vincule o arquivo `css/style.css`.
+Utilizei o atributo `required` nos campos para exigir o preenchimento antes do envio do formulário.
 
-### Etapa 2 — Criar os estilos
+### Etapa 2 — Estilização com CSS e Bootstrap
 
-No arquivo `css/style.css`, defina os estilos específicos da aplicação.
+Em seguida, criei o arquivo `css/style.css` para adicionar os estilos personalizados.
 
-Você pode utilizar o Bootstrap para organizar os elementos e aplicar estilos básicos, enquanto o CSS personalizado será responsável por detalhes como a cor de fundo, a cor do título e a animação de entrada das linhas da tabela.
+Utilizei o Bootstrap para facilitar a organização dos elementos e a aparência dos campos e da tabela. No CSS, personalizei o fundo da página, a cor do título e a animação de entrada das linhas.
 
-### Etapa 3 — Criar o array de pacientes
+Com isso, compreendi como o Bootstrap e o CSS personalizado podem ser utilizados juntos para melhorar a apresentação da aplicação.
 
-No arquivo `js/app.js`, crie um array vazio:
+### Etapa 3 — Criação do array de pacientes
+
+No arquivo `js/app.js`, criei um array vazio para armazenar os pacientes cadastrados:
 
 ```javascript
 const pacientes = [];
 ```
 
-Esse array armazenará os pacientes cadastrados durante a execução da aplicação.
+Cada paciente é representado por um objeto com as propriedades `nome`, `email` e `nascimento`.
 
-Cada paciente será representado por um objeto com três propriedades:
+Exemplo de um objeto utilizado para representar um paciente:
 
 ```javascript
 {
@@ -127,178 +118,141 @@ Cada paciente será representado por um objeto com três propriedades:
 }
 ```
 
-Os valores acima são apenas um exemplo. Os dados reais serão obtidos a partir do formulário.
+Aprendi que um array de objetos permite organizar vários registros de maneira estruturada, facilitando a manipulação dos dados.
 
-### Etapa 4 — Capturar o envio do formulário
+### Etapa 4 — Captura dos dados do formulário
 
-Utilize `document.getElementById()` para obter uma referência ao formulário e adicione um listener para o evento `submit`.
+Utilizei `document.getElementById()` para obter referências aos elementos HTML e `addEventListener()` para identificar quando o formulário é enviado.
 
-Dentro desse evento:
+Dentro do evento `submit`, capturei os valores dos campos utilizando a propriedade `.value`.
 
-1. Impeça o comportamento padrão do formulário com `event.preventDefault()`.
-2. Capture os valores dos campos utilizando a propriedade `.value`.
-3. Passe os valores para a função responsável pelo cadastro.
-4. Atualize a tabela.
-5. Limpe o formulário após o cadastro.
+Também utilizei `event.preventDefault()` para impedir que o navegador recarregasse a página ao enviar o formulário.
 
-**Atenção:** o `event.preventDefault()` é essencial para que a página não seja recarregada a cada envio do formulário.
+Esse comportamento é importante porque, sem essa instrução, os dados armazenados apenas na memória seriam perdidos durante o envio.
 
-### Etapa 5 — Implementar a função de cadastro
+### Etapa 5 — Função `adicionarPaciente()`
 
-Crie uma função chamada `adicionarPaciente()` que receba nome, e-mail e data de nascimento.
+Criei a função `adicionarPaciente()` para receber os dados do formulário, criar um objeto com as informações do paciente e adicioná-lo ao array utilizando `push()`.
 
-Essa função deverá:
+Separei essa lógica em uma função específica para deixar o código mais organizado e facilitar sua compreensão.
 
-1. Criar um objeto com os dados recebidos.
-2. Adicionar esse objeto ao array `pacientes` utilizando `push()`.
+### Etapa 6 — Função `renderizarTabela()`
 
-Procure manter essa função responsável apenas pela inclusão dos dados na lista.
+Implementei a função `renderizarTabela()` para atualizar a tabela com os dados armazenados no array.
 
-### Etapa 6 — Renderizar a tabela
+Essa função realiza as seguintes operações:
 
-Crie uma função chamada `renderizarTabela()`.
+1. Limpa o conteúdo atual do `<tbody>`.
+2. Percorre o array `pacientes` utilizando `forEach()`.
+3. Cria uma linha `<tr>` para cada paciente.
+4. Insere os dados do paciente nas células da linha.
+5. Adiciona as linhas à tabela utilizando `appendChild()`.
 
-Ela deverá:
+Dessa forma, sempre que um novo paciente é cadastrado, a tabela é atualizada para exibir todos os registros armazenados.
 
-1. Limpar o conteúdo atual do `<tbody>`.
-2. Percorrer o array `pacientes` utilizando `forEach()`.
-3. Criar uma linha `<tr>` para cada paciente.
-4. Criar as células com nome, e-mail e data de nascimento.
-5. Inserir as linhas no `<tbody>` utilizando `appendChild()`.
+### Etapa 7 — Formatação da data
 
-Sempre que um paciente for cadastrado, chame essa função para atualizar a tabela.
+O campo `input type="date"` fornece a data no formato `aaaa-mm-dd`.
 
-### Etapa 7 — Formatar a data
+Para apresentar a data no formato brasileiro, criei a função `formatarData()`, utilizando `split('-')` para separar o ano, o mês e o dia.
 
-O campo HTML `input type="date"` fornece a data no formato `aaaa-mm-dd`.
+Exemplo:
 
-Crie a função `formatarData()` para exibir essa informação no formato brasileiro `dd/mm/aaaa`.
+- **Entrada:** `1998-05-12`
+- **Saída:** `12/05/1998`
 
-Por exemplo:
+Com isso, consegui apresentar as datas em um formato mais familiar para o usuário.
 
-```text
-Entrada: 1998-05-12
-Saída:   12/05/1998
-```
+## 7. Como executei e testei o projeto
 
-Utilize `split('-')` para separar o ano, o mês e o dia e reorganize os valores para exibição.
+Para testar a aplicação, segui estes passos:
 
-## 7. Como executar o projeto
+1. Abri a pasta do projeto no Visual Studio Code.
+2. Abri o arquivo `index.html` diretamente no navegador.
+3. Preenchi os campos do formulário com os dados de um paciente.
+4. Cliquei no botão de cadastro.
+5. Verifiquei se os dados apareceram corretamente na tabela.
+6. Cadastrei outros pacientes para testar a atualização da lista.
+7. Atualizei a página para observar o comportamento dos dados armazenados.
 
-Depois de criar os arquivos e implementar o código:
+Não foi necessário instalar o Node.js, configurar um servidor ou criar um banco de dados para executar esta primeira versão.
 
-1. Abra a pasta do projeto no Visual Studio Code ou em outro editor de sua preferência.
-2. Abra o arquivo `index.html` diretamente no navegador ou utilize a extensão Live Server.
-3. Preencha os campos do formulário.
-4. Clique no botão de cadastro.
-5. Verifique se o paciente aparece na tabela.
-6. Cadastre outros pacientes para testar a atualização da lista.
-7. Atualize a página e observe o que acontece com os dados.
+## 8. Exercícios propostos
 
-Não é necessário instalar Node.js, configurar um servidor ou criar um banco de dados nesta etapa.
-
-## 8. Como verificar se a aplicação funciona
-
-Utilize esta lista para conferir sua implementação:
-
-- [ ] A página apresenta o formulário e a tabela.
-- [ ] Os campos obrigatórios impedem o envio quando estão vazios.
-- [ ] O formulário pode ser enviado sem recarregar a página.
-- [ ] Os dados preenchidos são armazenados em objetos dentro do array.
-- [ ] Cada novo cadastro gera uma nova linha na tabela.
-- [ ] A data de nascimento é exibida no formato `dd/mm/aaaa`.
-- [ ] Os campos do formulário são limpos após um cadastro bem-sucedido.
-- [ ] A tabela continua exibindo todos os pacientes cadastrados durante a sessão.
-- [ ] Ao atualizar a página, os dados desaparecem.
-
-O último item representa uma limitação esperada da aplicação, não necessariamente um erro no seu código.
-
-## 9. Exercícios práticos
-
-Após concluir a implementação principal, realize os exercícios abaixo.
+Além da implementação principal, a atividade propõe alguns exercícios para aprofundar os conhecimentos adquiridos.
 
 ### Exercício 1 — Adicionar telefone
 
-Adicione um campo de telefone ao formulário e faça com que o número informado seja armazenado no objeto do paciente e exibido em uma nova coluna da tabela.
+Adicionar um campo de telefone ao formulário e exibir essa informação em uma nova coluna da tabela.
 
 ### Exercício 2 — Calcular a idade
 
-Adicione uma coluna chamada **Idade**.
+Adicionar uma coluna chamada **Idade**, calculando a idade de cada paciente a partir da data de nascimento utilizando o objeto `Date`.
 
-Calcule a idade de cada paciente a partir da data de nascimento, utilizando o objeto `Date`.
-
-**Dica:** subtrair o ano de nascimento do ano atual é um começo, mas você também precisa considerar se o paciente já fez aniversário neste ano.
+Para obter um resultado correto, é necessário considerar também se o paciente já fez aniversário no ano atual.
 
 ### Exercício 3 — Contabilizar pacientes
 
-Adicione um contador acima da tabela com o seguinte formato:
+Adicionar um contador acima da tabela para exibir a quantidade total de pacientes cadastrados.
 
-```text
-Total de pacientes: 3
-```
+Exemplo:
 
-O valor deverá ser atualizado automaticamente após cada cadastro.
+`Total de pacientes: 3`
+
+O contador deve ser atualizado automaticamente após cada cadastro.
 
 ### Exercício 4 — Evitar e-mails duplicados
 
-Antes de adicionar um paciente ao array, verifique se já existe outro cadastro com o mesmo e-mail.
+Verificar se o e-mail informado já existe no array antes de adicionar um novo paciente.
 
-Se o e-mail já estiver cadastrado, exiba um `alert()` e impeça a inclusão do novo paciente.
+Caso o e-mail já esteja cadastrado, a aplicação deverá exibir um `alert()` e impedir a duplicação.
 
-Caso contrário, realize o cadastro normalmente.
+## 9. Desafios extras
 
-## 10. Desafios extras
+Para ampliar a aplicação e praticar outros conceitos de JavaScript, também foram propostos os seguintes desafios:
 
-Se você concluiu os exercícios anteriores, tente implementar funcionalidades adicionais:
+- **Remover pacientes:** adicionar um botão em cada linha para excluir um paciente da lista.
+- **Buscar pacientes:** criar um campo de busca que filtre os resultados pelo nome enquanto o usuário digita, utilizando o evento `input`.
+- **Ordenar pacientes:** permitir ordenar a tabela alfabeticamente pelo nome.
+- **Persistir os dados:** utilizar `localStorage` para manter os cadastros após atualizar a página.
 
-- **Remover pacientes:** adicione um botão em cada linha para excluir um paciente da lista.
-- **Buscar pacientes:** crie um campo de busca que filtre os resultados pelo nome enquanto o usuário digita, utilizando o evento `input`.
-- **Ordenar pacientes:** permita ordenar a tabela alfabeticamente pelo nome.
-- **Persistir os dados:** utilize `localStorage` para manter os cadastros após atualizar a página.
+Essas funcionalidades permitem explorar novas possibilidades de manipulação dos dados e melhorar a experiência de utilização da aplicação.
 
-O último desafio é especialmente importante: ele permite experimentar uma forma simples de persistência no navegador antes de estudar a persistência em um banco de dados.
+## 10. Erros comuns e soluções
 
-## 11. Erros comuns e como investigar
+Durante o desenvolvimento, alguns problemas podem ocorrer. A tabela abaixo apresenta situações comuns e o que verificar em cada caso.
 
 | Problema | O que verificar |
 |---|---|
-| A página recarrega ao cadastrar | Confira se `event.preventDefault()` está sendo executado dentro do evento `submit`. |
-| A tabela não atualiza | Verifique se `renderizarTabela()` é chamada após adicionar o paciente. |
-| Aparece `Cannot read properties of null` | Confira os identificadores dos elementos e se o JavaScript é carregado depois do HTML. |
-| A data aparece incorretamente | Verifique a ordem dos valores separados por `split('-')`. |
-| O Bootstrap não funciona | Confira o link da CDN e sua conexão com a internet. |
-| Os pacientes desaparecem ao atualizar a página | Isso é esperado: o array existe apenas na memória da página atual. |
-| O contador ou a busca não funcionam | Confira se os elementos do HTML foram identificados corretamente e se a lógica é executada após as alterações nos dados. |
+| A página recarrega ao cadastrar | Verificar se `event.preventDefault()` está sendo utilizado no evento `submit`. |
+| A tabela não atualiza | Verificar se a função `renderizarTabela()` é chamada após o cadastro. |
+| Aparece `Cannot read properties of null` | Conferir os identificadores dos elementos e a ordem de carregamento do JavaScript. |
+| A data aparece incorretamente | Conferir a ordem dos valores separados por `split('-')`. |
+| O Bootstrap não funciona | Verificar o link da CDN e a conexão com a internet. |
+| Os pacientes desaparecem ao atualizar a página | Isso acontece porque os dados estão armazenados apenas na memória do navegador. |
+| O contador ou a busca não funcionam | Conferir se os elementos HTML foram identificados corretamente e se a lógica é executada após as alterações nos dados. |
 
-Ao encontrar um erro, abra as ferramentas de desenvolvedor do navegador (DevTools) e consulte a aba Console. Mensagens de erro e testes com `console.log()` ajudam a identificar em qual parte do código o problema está ocorrendo.
+Uma forma de investigar esses problemas é utilizar as ferramentas de desenvolvedor do navegador, especialmente a aba Console, além de testes com `console.log()`.
 
-## 12. Perguntas para revisar o conteúdo
+## 11. O que compreendi com a atividade
 
-Ao final da aula, tente responder às perguntas com suas próprias palavras:
+Com o desenvolvimento deste projeto, compreendi melhor como HTML, CSS e JavaScript trabalham juntos para construir uma aplicação web.
 
-1. Qual é a função do HTML, do CSS e do JavaScript nesta aplicação?
-2. Por que precisamos utilizar `event.preventDefault()` no envio do formulário?
-3. Por que utilizamos um array de objetos em vez de criar uma variável separada para cada paciente?
-4. Qual é a responsabilidade das funções `adicionarPaciente()` e `renderizarTabela()`?
-5. O que acontece com os dados quando a página é atualizada? Por quê?
-6. Se duas pessoas abrirem a aplicação em computadores diferentes, elas compartilharão a mesma lista de pacientes?
-7. Qual é a diferença entre armazenar dados em um array, utilizar `localStorage` e salvar informações em um banco de dados?
-8. O que precisaríamos desenvolver para permitir que diferentes usuários consultassem e cadastrassem pacientes em uma lista compartilhada?
+Também pude praticar a captura de dados de formulários, a organização das informações em arrays de objetos e a atualização dinâmica de elementos HTML por meio da manipulação do DOM.
 
-## 13. O que vem a seguir?
+Outro ponto importante foi perceber a diferença entre armazenar informações temporariamente na memória do navegador e utilizar uma solução de persistência.
 
-Nesta aula, você construiu uma aplicação que funciona inteiramente no navegador. Apesar de ser útil para aprender os fundamentos, ela possui limitações importantes:
+Embora a aplicação funcione para cadastrar e visualizar pacientes, os dados não são mantidos após a atualização da página e não podem ser compartilhados entre diferentes usuários.
 
-- Os dados não são compartilhados entre usuários.
-- O array não mantém os dados após a atualização da página.
-- Não existe um servidor responsável por processar e centralizar as informações.
-- Não há um banco de dados para armazenar os cadastros de forma persistente.
+## 12. Próximos passos
 
-Nas próximas aulas, você começará a evoluir essa aplicação, aprendendo a construir um backend com **Node.js e Express**, criar uma **API REST** e integrar a aplicação a um banco de dados **PostgreSQL**.
+Esta atividade representa a primeira etapa do desenvolvimento de um sistema de cadastro de pacientes.
 
-A ideia é aproveitar o que você já construiu e substituir, gradualmente, o armazenamento local por uma estrutura capaz de atender a múltiplos usuários.
+Nas próximas aulas, vou aprofundar meus conhecimentos em backend, aprendendo a utilizar **Node.js e Express** para desenvolver uma API REST e, posteriormente, integrar a aplicação a um banco de dados **PostgreSQL**.
+
+Dessa forma, poderei evoluir a aplicação atual para uma solução capaz de armazenar os dados de maneira persistente e permitir o compartilhamento das informações entre diferentes usuários.
 
 ---
 
-**Resultado esperado:** ao finalizar esta aula, você terá uma aplicação funcional de cadastro de pacientes e compreenderá como capturar, armazenar e apresentar dados utilizando HTML, CSS e JavaScript puro.
+**Resultado da aula:** desenvolvi uma aplicação de cadastro de pacientes utilizando HTML, CSS e JavaScript puro, praticando a captura, o armazenamento temporário e a exibição dinâmica de dados no navegador.
 ````
