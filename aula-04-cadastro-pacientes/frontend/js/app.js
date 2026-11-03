@@ -1,4 +1,4 @@
-const API_URL = "https://api-clinica-rayane-borges.onrender.com/pacientes";
+const URL_API = "https://api-clinica-rayane-borges.onrender.com/pacientes";
 
 const formulario = document.getElementById("form-paciente");
 const tabela = document.getElementById("tabela-pacientes");
