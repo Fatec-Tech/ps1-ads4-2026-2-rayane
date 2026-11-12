@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Pool, types } = require('pg');
 
 // O tipo DATE do PostgreSQL tem o código 1082.
